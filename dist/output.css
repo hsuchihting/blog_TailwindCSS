@@ -488,6 +488,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -518,6 +522,59 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border {
   border-width: 1px;
+}
+
+.bg-highlight {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 247 236 / var(--tw-bg-opacity));
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-noto-sans {
+  font-family: Noto Sans TC;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(64 105 81 / var(--tw-text-opacity));
+}
+
+.text-peach {
+  --tw-text-opacity: 1;
+  color: rgb(239 162 162 / var(--tw-text-opacity));
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(204 204 204 / var(--tw-text-opacity));
+}
+
+.text-text {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
 .blur {
