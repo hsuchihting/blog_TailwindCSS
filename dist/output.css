@@ -529,6 +529,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(250 247 236 / var(--tw-bg-opacity));
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .text-center {
   text-align: center;
 }
