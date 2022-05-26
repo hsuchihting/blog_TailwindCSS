@@ -12,6 +12,7 @@ module.exports = {
         peach: "#EFA2A2",
         lightGray: "#999999",
         secondary: "#CCCCCC",
+        "header-bg": "#F4F4F4",
       },
       fontFamily: {
         "noto-sans": "Noto Sans TC",
