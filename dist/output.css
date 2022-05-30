@@ -505,8 +505,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
 }
 
 .block {
@@ -535,10 +539,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hidden {
   display: none;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .h-\[480px\] {
@@ -578,22 +578,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / 0.7);
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .pb-5 {
   padding-bottom: 1.25rem;
 }
 
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pb-9 {
+  padding-bottom: 2.25rem;
 }
 
 .text-center {
@@ -656,9 +654,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .header-image {
-  background-image: url("https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I");
+  background-image: url("../assets/images/banner.png");
   background-position: center center;
-  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -670,8 +667,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: flex;
   }
 
-  .md\:h-\[410px\] {
-    height: 410px;
+  .md\:h-\[369px\] {
+    height: 369px;
   }
 
   .md\:w-full {
