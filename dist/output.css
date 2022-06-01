@@ -545,6 +545,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 480px;
 }
 
+.h-\[250px\] {
+  height: 250px;
+}
+
 .w-\[1100px\] {
   width: 1100px;
 }
@@ -557,6 +561,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 259px;
 }
 
+.w-3\/12 {
+  width: 25%;
+}
+
+.w-\[250px\] {
+  width: 250px;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
+}
+
 .resize {
   resize: both;
 }
@@ -565,8 +581,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-around {
   justify-content: space-around;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .border {
@@ -580,6 +604,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-black\/70 {
   background-color: rgb(0 0 0 / 0.7);
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .pt-12 {
@@ -596,6 +634,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -621,6 +663,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -633,6 +680,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 300;
 }
 
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(64 105 81 / var(--tw-text-opacity));
@@ -641,6 +696,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-text {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(204 204 204 / var(--tw-text-opacity));
+}
+
+.text-peach {
+  --tw-text-opacity: 1;
+  color: rgb(239 162 162 / var(--tw-text-opacity));
 }
 
 .blur {

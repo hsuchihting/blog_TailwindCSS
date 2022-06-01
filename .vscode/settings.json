@@ -19,5 +19,6 @@
       "no-descending-specificity": null
     }
   },
-  "css.validate": false
+  "css.validate": false,
+  "editor.fontFamily": "Hasklig, Consolas, 'Courier New', monospace"
 }
