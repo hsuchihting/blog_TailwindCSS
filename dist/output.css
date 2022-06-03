@@ -513,6 +513,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1.25rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -545,8 +553,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 480px;
 }
 
-.h-\[250px\] {
-  height: 250px;
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[20px\] {
+  height: 20px;
 }
 
 .w-\[1100px\] {
@@ -557,20 +569,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-\[259px\] {
-  width: 259px;
+.w-\[260px\] {
+  width: 260px;
 }
 
 .w-3\/12 {
   width: 25%;
 }
 
-.w-\[250px\] {
-  width: 250px;
+.w-\[20px\] {
+  width: 20px;
 }
 
-.w-8\/12 {
-  width: 66.666667%;
+.w-9\/12 {
+  width: 75%;
 }
 
 .resize {
@@ -579,6 +591,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -593,8 +609,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border {
   border-width: 1px;
+}
+
+.border-y-2 {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
 }
 
 .bg-header-bg {
@@ -611,6 +636,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-highlight {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 247 236 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -618,6 +648,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pt-12 {
@@ -638,6 +692,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .text-center {
@@ -668,6 +734,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -680,8 +751,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 300;
 }
 
-.leading-5 {
-  line-height: 1.25rem;
+.leading-loose {
+  line-height: 2;
 }
 
 .tracking-wide {
@@ -711,6 +782,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-peach {
   --tw-text-opacity: 1;
   color: rgb(239 162 162 / var(--tw-text-opacity));
+}
+
+.text-lightGray {
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
 .blur {
