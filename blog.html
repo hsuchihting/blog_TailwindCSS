@@ -6,20 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/blog.png" type="image/x-icon" />
     <link rel="stylesheet" href="dist/output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
-      integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
-      crossorigin="anonymous"
-    />
     <title>Blog Demo</title>
   </head>
   <body class="bg-header-bg">
-    <div class="w-[1100px] mx-auto">
+    <div class="md:w-[1100px] md:mx-auto">
       <header>
         <!-- menu -->
-        <ul class="md:float-right md:flex">
-          <li class="pt-12 pb-9">
+        <ul class="hidden md:float-right md:flex">
+          <li class="md:pt-12 md:spb-9">
             <a
               href=""
               class="text-primary text-lg font-sans font-medium hover:border-b-4 hover:border-b-primary hover:pb-2 hover:duration-300"
@@ -45,10 +39,17 @@
           </li>
         </ul>
         <!-- banner -->
-        <div class="w-full mx-auto h-[480px]">
-          <div class="relative">
-            <div class="w-[260px] h-[480px] ml-5 bg-black/70 absolute top-0">
-              <div class="text-center absolute top-[201px] left-[20%]">
+        <div
+          class="w-full h-[154px] bg-black/70 md:bg-transparent md:w-full md:mx-auto md:h-[480px]"
+        >
+          <div class="block md:relative">
+            <div
+              class="w-full md:w-[260px] md:h-[480px] md:ml-5 md:bg-black/70 md:absolute md:top-0"
+            >
+              <!-- pc -->
+              <div
+                class="hidden md:block md:text-center md:absolute md:top-[201px] md:left-[20%]"
+              >
                 <h1 class="text-white font-bold text-4xl pb-5">
                   <p class="pb-3">Show</p>
                   <p>Yourself</p>
@@ -56,20 +57,84 @@
                 <p class="text-white font-medium text-lg">旅遊 X 日常 X 美食</p>
                 <p class="text-white font-light text-sm">Daily Love</p>
               </div>
+              <!-- mobile menu -->
+              <div class="h-[154px] relative md:hidden">
+                <div class="flex justify-around items-center py-5">
+                  <button class="block active:hidden" id="menu-open">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="20.571"
+                      viewBox="0 0 24 20.571"
+                    >
+                      <path
+                        id="bars-solid"
+                        d="M0,65.714A1.714,1.714,0,0,1,1.714,64H22.286a1.714,1.714,0,0,1,0,3.429H1.714A1.713,1.713,0,0,1,0,65.714Zm0,8.571a1.713,1.713,0,0,1,1.714-1.714H22.286a1.714,1.714,0,0,1,0,3.429H1.714A1.713,1.713,0,0,1,0,74.286ZM22.286,84.571H1.714a1.714,1.714,0,1,1,0-3.429H22.286a1.714,1.714,0,1,1,0,3.429Z"
+                        transform="translate(0 -64)"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </button>
+
+                  <button class=" hidden active:block" id="menu-close">
+                    <svg
+                      fill="#ffffff"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 30 30"
+                      width="30px"
+                      height="30px"
+                    >
+                      <path
+                        d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
+                      />
+                    </svg>
+                  </button>
+
+                  <h2
+                    class="font-sans font-bold tracking-wide text-2xl text-white"
+                  >
+                    Show Yourself
+                  </h2>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      id="circle-user-solid"
+                      d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,6A3.375,3.375,0,1,1,8.625,9.375,3.375,3.375,0,0,1,12,6Zm0,15a8.976,8.976,0,0,1-6.361-2.639A5.217,5.217,0,0,1,10.5,15h3a5.212,5.212,0,0,1,4.861,3.361A8.973,8.973,0,0,1,12,21Z"
+                      fill="#fff"
+                    />
+                  </svg>
+                </div>
+
+                <p class="font-sans text-sm text-white text-center">
+                  旅遊 X 日常 X 美食
+                </p>
+                <p class="font-sans text-sm text-white text-center pt-3">
+                  Daily Love
+                </p>
+
+                <div
+                  class="header-image h-[154px] w-full overflow-hidden object-bottom absolute top-0 left-0 -z-10"
+                ></div>
+              </div>
             </div>
           </div>
           <div
-            class="header-image flex justify-around items-center md:h-[369px] md:w-full"
+            class="header-image md:flex md:justify-around md:items-center md:h-[369px] md:w-full"
           ></div>
         </div>
       </header>
       <!-- content -->
       <section>
-        <div class="flex justify-between bg-white p-5">
-          <div class="w-3/12">
-            <div class="w-[260px]">
+        <div class="md:flex md:justify-between bg-white md:p-5">
+          <div id="article-list" class="block md:w-3/12">
+            <div class="w-full md:w-[260px]">
               <!-- photo -->
-              <div class="h-[300px] overflow-hidden">
+              <div class="hidden md:h-[300px] md:overflow-hidden">
                 <img
                   class="object-cover"
                   src="./assets/images/people.jpg"
@@ -77,7 +142,7 @@
                 />
               </div>
               <!-- info -->
-              <div class="pt-10">
+              <div class="hidden md:pt-10">
                 <h2
                   class="text-primary tracking-wide font-bold font-sans text-3xl pb-3"
                 >
@@ -113,162 +178,241 @@
                   </div>
                 </div>
               </div>
-              <!-- 文章分類 -->
-              <div
-                class="mt-10 px-2 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
-              >
-                文章分類
-              </div>
-              <!-- 文章分類內容 -->
-              <ul class="pl-2 pr-5 py-8">
-                <li class="flex items-center">
-                  <span
-                    class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
-                  >
+              <!-- mobile padding -->
+              <div class="px-5 md:px-0">
+                <div
+                  class="flex justify-between md:mt-10 px-3 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
+                >
+                  文章分類
+                  <button class="block pr-2 md:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="9.761"
-                      height="9.761"
-                      viewBox="0 0 9.761 9.761"
+                      width="13.715"
+                      height="8"
+                      viewBox="0 0 13.715 8"
                     >
                       <path
-                        id="plus-solid"
-                        d="M25.761,52.88a.751.751,0,0,1-.751.751H21.631V57.01a.751.751,0,0,1-1.5,0V53.631H16.751a.751.751,0,1,1,0-1.5h3.379V48.751a.751.751,0,1,1,1.5,0V52.13H25.01A.75.75,0,0,1,25.761,52.88Z"
-                        transform="translate(-16 -48)"
-                        fill="#999"
+                        id="angle-right-solid"
+                        d="M33.148,77.69a1.143,1.143,0,0,1-.808-1.951l4.908-4.906L32.34,65.926a1.143,1.143,0,1,1,1.616-1.616l5.714,5.714a1.142,1.142,0,0,1,0,1.616l-5.714,5.714A1.133,1.133,0,0,1,33.148,77.69Z"
+                        transform="translate(77.69 -32.005) rotate(90)"
+                        fill="#406951"
                       />
                     </svg>
-                  </span>
-                  <span class="pl-2 font-sans font-bold text-lightGray"
-                    >旅遊</span
-                  >
-                  <span class="ml-auto text-lightGray">(12)</span>
-                </li>
-                <li class="flex items-center pt-2">
-                  <span class="w-[20px] h-[20px] bg-white"></span>
-                  <span class="pl-2 font-sans font-bold text-lightGray"
-                    >生活雜記</span
-                  >
-                  <span class="ml-auto text-lightGray">(56)</span>
-                </li>
-                <li class="flex items-center pt-2">
-                  <span
-                    class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="9.761"
-                      height="9.761"
-                      viewBox="0 0 9.761 9.761"
+                  </button>
+                </div>
+                <!-- 文章分類內容 -->
+                <ul class="active:block md:block pl-2 pr-5 py-8">
+                  <li class="flex items-center">
+                    <span
+                      class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
                     >
-                      <path
-                        id="plus-solid"
-                        d="M25.761,52.88a.751.751,0,0,1-.751.751H21.631V57.01a.751.751,0,0,1-1.5,0V53.631H16.751a.751.751,0,1,1,0-1.5h3.379V48.751a.751.751,0,1,1,1.5,0V52.13H25.01A.75.75,0,0,1,25.761,52.88Z"
-                        transform="translate(-16 -48)"
-                        fill="#999"
-                      />
-                    </svg>
-                  </span>
-                  <span class="pl-2 font-sans font-bold text-lightGray"
-                    >隨意雜七雜八</span
-                  >
-                  <span class="ml-auto text-lightGray">(107)</span>
-                </li>
-                <li class="flex items-center pt-2">
-                  <span
-                    class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="9.761"
-                      height="1.506"
-                      viewBox="0 0 9.761 1.506"
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9.761"
+                        height="9.761"
+                        viewBox="0 0 9.761 9.761"
+                      >
+                        <path
+                          id="plus-solid"
+                          d="M25.761,52.88a.751.751,0,0,1-.751.751H21.631V57.01a.751.751,0,0,1-1.5,0V53.631H16.751a.751.751,0,1,1,0-1.5h3.379V48.751a.751.751,0,1,1,1.5,0V52.13H25.01A.75.75,0,0,1,25.761,52.88Z"
+                          transform="translate(-16 -48)"
+                          fill="#999"
+                        />
+                      </svg>
+                    </span>
+                    <span class="pl-2 font-sans font-bold text-lightGray"
+                      >旅遊</span
                     >
-                      <path
-                        id="plus-solid"
-                        d="M25.761,52.88a.751.751,0,0,1-.751.751c-.016.016-8.268-.029-8.259,0a.751.751,0,1,1,0-1.5c-.157.042,4.887-.006,8.259,0A.75.75,0,0,1,25.761,52.88Z"
-                        transform="translate(-16 -52.129)"
-                        fill="#999"
-                      />
-                    </svg>
-                  </span>
-                  <span class="pl-2 font-sans font-bold text-lightGray"
-                    >美食日誌</span
-                  >
-                  <span class="ml-auto text-lightGray">(135)</span>
-                </li>
+                    <span class="ml-auto font-sans font-bold text-lightGray"
+                      >(12)</span
+                    >
+                  </li>
+                  <li class="flex items-center pt-2">
+                    <span class="w-[20px] h-[20px] bg-white"></span>
+                    <span class="pl-2 font-sans font-bold text-lightGray"
+                      >生活雜記</span
+                    >
+                    <span class="ml-auto font-sans font-bold text-lightGray"
+                      >(56)</span
+                    >
+                  </li>
+                  <li class="flex items-center pt-2">
+                    <span
+                      class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9.761"
+                        height="9.761"
+                        viewBox="0 0 9.761 9.761"
+                      >
+                        <path
+                          id="plus-solid"
+                          d="M25.761,52.88a.751.751,0,0,1-.751.751H21.631V57.01a.751.751,0,0,1-1.5,0V53.631H16.751a.751.751,0,1,1,0-1.5h3.379V48.751a.751.751,0,1,1,1.5,0V52.13H25.01A.75.75,0,0,1,25.761,52.88Z"
+                          transform="translate(-16 -48)"
+                          fill="#999"
+                        />
+                      </svg>
+                    </span>
+                    <span class="pl-2 font-sans font-bold text-lightGray"
+                      >隨意雜七雜八</span
+                    >
+                    <span class="ml-auto font-sans font-bold text-lightGray"
+                      >(107)</span
+                    >
+                  </li>
+                  <li class="flex items-center pt-2">
+                    <span
+                      class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
+                    >
+                      <svg
+                        class="block md:hidden"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9.761"
+                        height="9.761"
+                        viewBox="0 0 9.761 9.761"
+                      >
+                        <path
+                          id="plus-solid"
+                          d="M25.761,52.88a.751.751,0,0,1-.751.751H21.631V57.01a.751.751,0,0,1-1.5,0V53.631H16.751a.751.751,0,1,1,0-1.5h3.379V48.751a.751.751,0,1,1,1.5,0V52.13H25.01A.75.75,0,0,1,25.761,52.88Z"
+                          transform="translate(-16 -48)"
+                          fill="#999"
+                        />
+                      </svg>
+                      <svg
+                        class="hidden md:block"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9.761"
+                        height="1.506"
+                        viewBox="0 0 9.761 1.506"
+                      >
+                        <path
+                          id="plus-solid"
+                          d="M25.761,52.88a.751.751,0,0,1-.751.751c-.016.016-8.268-.029-8.259,0a.751.751,0,1,1,0-1.5c-.157.042,4.887-.006,8.259,0A.75.75,0,0,1,25.761,52.88Z"
+                          transform="translate(-16 -52.129)"
+                          fill="#999"
+                        />
+                      </svg>
+                    </span>
+                    <span class="pl-2 font-sans font-bold text-lightGray"
+                      >美食日誌</span
+                    >
+                    <span class="ml-auto font-sans font-bold text-lightGray"
+                      >(135)</span
+                    >
+                  </li>
 
-                <ul class="ml-11">
+                  <ul class="hidden md:block ml-11">
+                    <li class="flex items-center pt-2">
+                      <span class="text-lightGray font-sans">甜點</span>
+                      <span class="ml-auto font-sans text-lightGray">(42)</span>
+                    </li>
+                    <li class="flex items-center pt-2">
+                      <span class="text-lightGray font-sans">西餐</span>
+                      <span class="ml-auto font-sans text-lightGray">(54)</span>
+                    </li>
+                    <li class="flex items-center pt-2">
+                      <span class="text-lightGray font-sans">日式</span>
+                      <span class="ml-auto font-sans text-lightGray">(25)</span>
+                    </li>
+                    <li class="flex items-center pt-2">
+                      <span class="text-lightGray font-sans">中式</span>
+                      <span class="ml-auto font-sans text-lightGray">(14)</span>
+                    </li>
+                  </ul>
+
                   <li class="flex items-center pt-2">
-                    <span class="text-lightGray font-sans">甜點</span>
-                    <span class="ml-auto text-lightGray">(42)</span>
-                  </li>
-                  <li class="flex items-center pt-2">
-                    <span class="text-lightGray font-sans">西餐</span>
-                    <span class="ml-auto text-lightGray">(54)</span>
-                  </li>
-                  <li class="flex items-center pt-2">
-                    <span class="text-lightGray font-sans">日式</span>
-                    <span class="ml-auto text-lightGray">(25)</span>
-                  </li>
-                  <li class="flex items-center pt-2">
-                    <span class="text-lightGray font-sans">中式</span>
-                    <span class="ml-auto text-lightGray">(14)</span>
+                    <span class="w-[20px] h-[20px] bg-white"></span>
+                    <span class="pl-2 font-sans font-bold text-lightGray"
+                      >未分類文章</span
+                    >
+                    <span class="ml-auto font-sans font-bold text-lightGray"
+                      >(9)</span
+                    >
                   </li>
                 </ul>
 
-                <li class="flex items-center pt-2">
-                  <span class="w-[20px] h-[20px] bg-white"></span>
-                  <span class="pl-2 font-sans font-bold text-lightGray"
-                    >未分類文章</span
-                  >
-                  <span class="ml-auto text-lightGray">(9)</span>
-                </li>
-              </ul>
+                <!-- 最新文章 -->
+                <div
+                  class="flex justify-between md:mt-10 px-3 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
+                >
+                  最新文章
+                  <button class="block pr-2 md:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13.715"
+                      height="8"
+                      viewBox="0 0 13.715 8"
+                    >
+                      <path
+                        id="angle-right-solid"
+                        d="M33.148,77.69a1.143,1.143,0,0,1-.808-1.951l4.908-4.906L32.34,65.926a1.143,1.143,0,1,1,1.616-1.616l5.714,5.714a1.142,1.142,0,0,1,0,1.616l-5.714,5.714A1.133,1.133,0,0,1,33.148,77.69Z"
+                        transform="translate(77.69 -32.005) rotate(90)"
+                        fill="#406951"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <ul class="md:block pl-2 pr-5 py-8">
+                  <li class="text-text font-sans">
+                    The End is the Beginning :)
+                  </li>
+                  <li class="text-text font-sans pt-2">走跳台中</li>
+                  <li class="text-text font-sans pt-2">
+                    Make your own birthday……
+                  </li>
+                  <li class="text-text font-sans pt-2">陽明山一日遊</li>
+                  <li class="text-text font-sans pt-2">日常小確幸</li>
+                  <li class="text-text font-sans pt-2">Good Bye 2021</li>
+                </ul>
 
-              <!-- 最新文章 -->
-              <div
-                class="px-2 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
-              >
-                最新文章
+                <!-- 最新回應 -->
+                <div
+                  class="flex justify-between md:mt-10 px-3 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
+                >
+                  最新回應
+                  <button class="block pr-2 md:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13.715"
+                      height="8"
+                      viewBox="0 0 13.715 8"
+                    >
+                      <path
+                        id="angle-right-solid"
+                        d="M33.148,77.69a1.143,1.143,0,0,1-.808-1.951l4.908-4.906L32.34,65.926a1.143,1.143,0,1,1,1.616-1.616l5.714,5.714a1.142,1.142,0,0,1,0,1.616l-5.714,5.714A1.133,1.133,0,0,1,33.148,77.69Z"
+                        transform="translate(77.69 -32.005) rotate(90)"
+                        fill="#406951"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <ul class="md:block pl-2 pr-5 py-8">
+                  <li class="pb-2">
+                    <p class="text-text font-sans">
+                      The End is the Beginning :)
+                    </p>
+                    <p class="text-secondary">MAY.05.2022</p>
+                  </li>
+                  <li class="pb-2">
+                    <p class="text-text font-sans">
+                      The End is the Beginning :)
+                    </p>
+                    <p class="text-secondary">MAY.05.2022</p>
+                  </li>
+                  <li class="pb-2">
+                    <p class="text-text font-sans">Make your own birthday……</p>
+                    <p class="text-secondary">MAY.05.2022</p>
+                  </li>
+                  <li class="pb-2">
+                    <p class="text-text font-sans">Make your own birthday……</p>
+                    <p class="text-secondary">MAY.05.2022</p>
+                  </li>
+                </ul>
               </div>
-              <ul class="pl-2 pr-5 py-8">
-                <li class="text-text font-sans">The End is the Beginning :)</li>
-                <li class="text-text font-sans pt-2">走跳台中</li>
-                <li class="text-text font-sans pt-2">
-                  Make your own birthday……
-                </li>
-                <li class="text-text font-sans pt-2">陽明山一日遊</li>
-                <li class="text-text font-sans pt-2">日常小確幸</li>
-                <li class="text-text font-sans pt-2">Good Bye 2021</li>
-              </ul>
+              <!-- 文章分類 -->
 
-              <!-- 最新回應 -->
-              <div
-                class="px-2 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
-              >
-                最新回應
-              </div>
-              <ul class="pl-2 pr-5 py-8">
-                <li class="pb-2">
-                  <p class="text-text font-sans">The End is the Beginning :)</p>
-                  <p class="text-secondary">MAY.05.2022</p>
-                </li>
-                <li class="pb-2">
-                  <p class="text-text font-sans">The End is the Beginning :)</p>
-                  <p class="text-secondary">MAY.05.2022</p>
-                </li>
-                <li class="pb-2">
-                  <p class="text-text font-sans">Make your own birthday……</p>
-                  <p class="text-secondary">MAY.05.2022</p>
-                </li>
-                <li class="pb-2">
-                  <p class="text-text font-sans">Make your own birthday……</p>
-                  <p class="text-secondary">MAY.05.2022</p>
-                </li>
-              </ul>
-
-              <div class="p-2 border-y-2">
+              <div class="hidden md:block md:p-2 md:first-letter md:border-y-2">
                 <div class="py-5">
                   <p class="text-lightGray pb-3">暱 稱： Your Name</p>
                   <p class="text-lightGray">累積瀏覽： 6521 人</p>
@@ -277,7 +421,7 @@
             </div>
           </div>
 
-          <div class="w-9/12 pl-10">
+          <div class="md:w-9/12 md:pl-10">
             <ul>
               <li>
                 <img
@@ -285,7 +429,7 @@
                   src="/assets/images/blog-1.png"
                   alt="blog-1"
                 />
-                <div class="pt-10">
+                <div class="pt-10 px-4 md:px-0">
                   <div class="flex items-center">
                     <!-- tags -->
                     <span
@@ -316,9 +460,12 @@
                           height="21"
                           viewBox="0 0 24 21"
                         >
-                          <path id="heart-solid"
-                          d="M0,49.287v-.278a6.811,6.811,0,0,1,5.6-6.763,6.64,6.64,0,0,1,5.841,1.915l.562.575.52-.575A6.721,6.721,0,0,1,18.4,42.246,6.81,6.81,0,0,1,24,49.008v.278a7.254,7.254,0,0,1-2.231,5.252L13.3,62.63a1.874,1.874,0,0,1-2.6,0L2.231,54.538A7.261,7.261,0,0,1,0,49.287Z"
-                          transform="translate(0 -42.152)" fill="#EFA2A2", "/>
+                          <path
+                            id="heart-solid"
+                            d="M0,49.287v-.278a6.811,6.811,0,0,1,5.6-6.763,6.64,6.64,0,0,1,5.841,1.915l.562.575.52-.575A6.721,6.721,0,0,1,18.4,42.246,6.81,6.81,0,0,1,24,49.008v.278a7.254,7.254,0,0,1-2.231,5.252L13.3,62.63a1.874,1.874,0,0,1-2.6,0L2.231,54.538A7.261,7.261,0,0,1,0,49.287Z"
+                            transform="translate(0 -42.152)"
+                            fill="#EFA2A2"
+                          />
                         </svg>
                       </span>
                     </div>
@@ -326,7 +473,7 @@
                   <!-- blog subject -->
                   <div class="pt-3">
                     <h3
-                      class="text-3xl font-sans font-bold tracking-wide text-black pb-3"
+                      class="text-2xl md:text-3xl font-sans font-bold tracking-wide text-black pb-3"
                     >
                       The End is the Beginning
                     </h3>
@@ -344,14 +491,16 @@
                       <li class="border-r border-lightGray pr-3">
                         FEB.02.2022
                       </li>
-                      <li class="border-r border-lightGray px-3">07:36</li>
-                      <li class="pl-3">回應(23)</li>
+                      <li class="md:border-r md:border-lightGray px-3">
+                        07:36
+                      </li>
+                      <li class="hidden md:pl-3">回應(23)</li>
                     </ul>
                     <p
                       class="ml-auto bg-highlight py-3 px-5 text-lightGray flex items-center"
                     >
                       繼續閱讀...
-                      <span class="pl-2">
+                      <span class="hidden md:pl-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="8"
@@ -376,7 +525,7 @@
                   src="/assets/images/blog-3.jpg"
                   alt="blog-3"
                 />
-                <div class="pt-10">
+                <div class="pt-10 px-4 md:px-0">
                   <div class="flex items-center">
                     <!-- tags -->
                     <span
@@ -407,9 +556,12 @@
                           height="21"
                           viewBox="0 0 24 21"
                         >
-                          <path id="heart-solid"
-                          d="M0,49.287v-.278a6.811,6.811,0,0,1,5.6-6.763,6.64,6.64,0,0,1,5.841,1.915l.562.575.52-.575A6.721,6.721,0,0,1,18.4,42.246,6.81,6.81,0,0,1,24,49.008v.278a7.254,7.254,0,0,1-2.231,5.252L13.3,62.63a1.874,1.874,0,0,1-2.6,0L2.231,54.538A7.261,7.261,0,0,1,0,49.287Z"
-                          transform="translate(0 -42.152)" fill="#EFA2A2", "/>
+                          <path
+                            id="heart-solid"
+                            d="M0,49.287v-.278a6.811,6.811,0,0,1,5.6-6.763,6.64,6.64,0,0,1,5.841,1.915l.562.575.52-.575A6.721,6.721,0,0,1,18.4,42.246,6.81,6.81,0,0,1,24,49.008v.278a7.254,7.254,0,0,1-2.231,5.252L13.3,62.63a1.874,1.874,0,0,1-2.6,0L2.231,54.538A7.261,7.261,0,0,1,0,49.287Z"
+                            transform="translate(0 -42.152)"
+                            fill="#EFA2A2"
+                          />
                         </svg>
                       </span>
                     </div>
@@ -467,7 +619,7 @@
                   src="/assets/images/blog-4.png"
                   alt="blog-4"
                 />
-                <div class="pt-10">
+                <div class="pt-10 px-4 md:px-0">
                   <div class="flex items-center">
                     <!-- tags -->
                     <span
@@ -502,9 +654,12 @@
                           height="21"
                           viewBox="0 0 24 21"
                         >
-                          <path id="heart-solid"
-                          d="M0,49.287v-.278a6.811,6.811,0,0,1,5.6-6.763,6.64,6.64,0,0,1,5.841,1.915l.562.575.52-.575A6.721,6.721,0,0,1,18.4,42.246,6.81,6.81,0,0,1,24,49.008v.278a7.254,7.254,0,0,1-2.231,5.252L13.3,62.63a1.874,1.874,0,0,1-2.6,0L2.231,54.538A7.261,7.261,0,0,1,0,49.287Z"
-                          transform="translate(0 -42.152)" fill="#EFA2A2", "/>
+                          <path
+                            id="heart-solid"
+                            d="M0,49.287v-.278a6.811,6.811,0,0,1,5.6-6.763,6.64,6.64,0,0,1,5.841,1.915l.562.575.52-.575A6.721,6.721,0,0,1,18.4,42.246,6.81,6.81,0,0,1,24,49.008v.278a7.254,7.254,0,0,1-2.231,5.252L13.3,62.63a1.874,1.874,0,0,1-2.6,0L2.231,54.538A7.261,7.261,0,0,1,0,49.287Z"
+                            transform="translate(0 -42.152)"
+                            fill="#EFA2A2"
+                          />
                         </svg>
                       </span>
                     </div>
@@ -588,7 +743,7 @@
             </ul>
 
             <!-- goTop -->
-            <div class="text-center mt-14">
+            <div class="mt-14">
               <a href="" class="py-5">
                 <svg
                   class="mx-auto"
@@ -609,7 +764,7 @@
                   class="font-sans text-2xl text-primary font-bold pt-3 text-center tracking-wider"
                 >
                   <span> GO </span>
-                  <span class=" pl-4"> TOP </span>
+                  <span class="pl-4"> TOP </span>
                 </p>
                 <div class="w-32 h-[1px] bg-primary mx-auto mt-2"></div>
                 <div class="w-32 h-[1px] bg-primary mx-auto mt-1"></div>
