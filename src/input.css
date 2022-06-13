@@ -7,3 +7,30 @@
   background-position: center center;
 }
 
+/* .menu-block {
+  @apply block;
+}
+
+.menu-close {
+  @apply hidden;
+}
+
+.article-list {
+  @apply hidden;
+}
+
+.article-btn {
+  @apply block;
+}
+
+.article-category {
+  @apply hidden;
+}
+
+.last-article {
+  @apply hidden;
+}
+
+.new-response {
+  @apply hidden;
+} */

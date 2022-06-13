@@ -6,5 +6,6 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
-  }
+  },
+  "devDependencies": {}
 }

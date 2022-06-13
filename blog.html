@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/blog.png" type="image/x-icon" />
     <link rel="stylesheet" href="dist/output.css" />
+    <script src="./js/jquery-3.6.0.js"></script>
+
     <title>Blog Demo</title>
   </head>
   <body class="bg-header-bg">
@@ -60,7 +62,7 @@
               <!-- mobile menu -->
               <div class="h-[154px] relative md:hidden">
                 <div class="flex justify-around items-center py-5">
-                  <button class="block active:hidden" id="menu-open">
+                  <button type="button" class="menu-block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -76,7 +78,7 @@
                     </svg>
                   </button>
 
-                  <button class=" hidden active:block" id="menu-close">
+                  <button type="button" class="menu-close">
                     <svg
                       fill="#ffffff"
                       xmlns="http://www.w3.org/2000/svg"
@@ -131,10 +133,10 @@
       <!-- content -->
       <section>
         <div class="md:flex md:justify-between bg-white md:p-5">
-          <div id="article-list" class="block md:w-3/12">
+          <div class="md:w-3/12">
             <div class="w-full md:w-[260px]">
               <!-- photo -->
-              <div class="hidden md:h-[300px] md:overflow-hidden">
+              <div class="hidden md:block md:h-[300px] md:overflow-hidden">
                 <img
                   class="object-cover"
                   src="./assets/images/people.jpg"
@@ -142,7 +144,7 @@
                 />
               </div>
               <!-- info -->
-              <div class="hidden md:pt-10">
+              <div class="hidden md:block md:pt-10">
                 <h2
                   class="text-primary tracking-wide font-bold font-sans text-3xl pb-3"
                 >
@@ -179,12 +181,12 @@
                 </div>
               </div>
               <!-- mobile padding -->
-              <div class="px-5 md:px-0">
+              <div class="article-list hidden active:block px-5 py-5 md:px-0">
                 <div
-                  class="flex justify-between md:mt-10 px-3 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
+                  class="flex justify-between md:mt-10 px-3 py-3 bg-highlight"
                 >
-                  文章分類
-                  <button class="block pr-2 md:hidden">
+                  <h3 class=" block text-primary text-2xl font-sans font-bold">文章分類 </h3>
+                  <button class="article-btn pr-2 md:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="13.715"
@@ -201,7 +203,10 @@
                   </button>
                 </div>
                 <!-- 文章分類內容 -->
-                <ul class="active:block md:block pl-2 pr-5 py-8">
+                <div class="article-category">
+                  <ul
+                  class=" hidden active:block md:block pl-2 pr-5 py-8"
+                >
                   <li class="flex items-center">
                     <span
                       class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
@@ -302,7 +307,7 @@
                     >
                   </li>
 
-                  <ul class="hidden md:block ml-11">
+                  <ul class="hidden active:block md:block ml-11">
                     <li class="flex items-center pt-2">
                       <span class="text-lightGray font-sans">甜點</span>
                       <span class="ml-auto font-sans text-lightGray">(42)</span>
@@ -331,13 +336,15 @@
                     >
                   </li>
                 </ul>
-
+                </div>         
                 <!-- 最新文章 -->
                 <div
-                  class="flex justify-between md:mt-10 px-3 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
+                  class="flex justify-between md:mt-10 px-3 py-3  bg-highlight"
                 >
+                <h3 class=" text-primary text-2xl font-sans font-bold"">
                   最新文章
-                  <button class="block pr-2 md:hidden">
+                </h3>
+                <button class="article-btn pr-2 md:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="13.715"
@@ -353,25 +360,30 @@
                     </svg>
                   </button>
                 </div>
-                <ul class="md:block pl-2 pr-5 py-8">
-                  <li class="text-text font-sans">
-                    The End is the Beginning :)
-                  </li>
-                  <li class="text-text font-sans pt-2">走跳台中</li>
-                  <li class="text-text font-sans pt-2">
-                    Make your own birthday……
-                  </li>
-                  <li class="text-text font-sans pt-2">陽明山一日遊</li>
-                  <li class="text-text font-sans pt-2">日常小確幸</li>
-                  <li class="text-text font-sans pt-2">Good Bye 2021</li>
-                </ul>
+                <div class="article-category">
+                  <ul class="hidden active:block md:block pl-2 pr-5 py-8">
+                    <li class="text-text font-sans">
+                      The End is the Beginning :)
+                    </li>
+                    <li class="text-text font-sans pt-2">走跳台中</li>
+                    <li class="text-text font-sans pt-2">
+                      Make your own birthday……
+                    </li>
+                    <li class="text-text font-sans pt-2">陽明山一日遊</li>
+                    <li class="text-text font-sans pt-2">日常小確幸</li>
+                    <li class="text-text font-sans pt-2">Good Bye 2021</li>
+                  </ul>
+                </div>
+                
 
                 <!-- 最新回應 -->
                 <div
-                  class="flex justify-between md:mt-10 px-3 py-3 text-primary text-2xl font-sans font-bold bg-highlight"
+                  class="flex justify-between md:mt-10 px-3 py-3  bg-highlight"
                 >
+                <h3 class=" text-primary text-2xl font-sans font-bold"">
                   最新回應
-                  <button class="block pr-2 md:hidden">
+                </h3>
+                  <button class="article-btn pr-2 md:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="13.715"
@@ -387,28 +399,31 @@
                     </svg>
                   </button>
                 </div>
-                <ul class="md:block pl-2 pr-5 py-8">
-                  <li class="pb-2">
-                    <p class="text-text font-sans">
-                      The End is the Beginning :)
-                    </p>
-                    <p class="text-secondary">MAY.05.2022</p>
-                  </li>
-                  <li class="pb-2">
-                    <p class="text-text font-sans">
-                      The End is the Beginning :)
-                    </p>
-                    <p class="text-secondary">MAY.05.2022</p>
-                  </li>
-                  <li class="pb-2">
-                    <p class="text-text font-sans">Make your own birthday……</p>
-                    <p class="text-secondary">MAY.05.2022</p>
-                  </li>
-                  <li class="pb-2">
-                    <p class="text-text font-sans">Make your own birthday……</p>
-                    <p class="text-secondary">MAY.05.2022</p>
-                  </li>
-                </ul>
+                <div class="article-category">
+                  <ul class="new-response hidden active:block md:block pl-2 pr-5 py-8">
+                    <li class="pb-2">
+                      <p class="text-text font-sans">
+                        The End is the Beginning :)
+                      </p>
+                      <p class="text-secondary">MAY.05.2022</p>
+                    </li>
+                    <li class="pb-2">
+                      <p class="text-text font-sans">
+                        The End is the Beginning :)
+                      </p>
+                      <p class="text-secondary">MAY.05.2022</p>
+                    </li>
+                    <li class="pb-2">
+                      <p class="text-text font-sans">Make your own birthday……</p>
+                      <p class="text-secondary">MAY.05.2022</p>
+                    </li>
+                    <li class="pb-2">
+                      <p class="text-text font-sans">Make your own birthday……</p>
+                      <p class="text-secondary">MAY.05.2022</p>
+                    </li>
+                  </ul>
+                </div>
+               
               </div>
               <!-- 文章分類 -->
 
@@ -778,7 +793,6 @@
       </section>
     </div>
     <!-- script -->
-    <script src="./js/jquery.js"></script>
     <script src="./js/all.js"></script>
   </body>
 </html>
