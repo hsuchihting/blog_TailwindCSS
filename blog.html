@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/blog.png" type="image/x-icon" />
     <link rel="stylesheet" href="dist/output.css" />
-    <script src="./js/jquery-3.6.0.js"></script>
 
     <title>Blog Demo</title>
   </head>
@@ -181,7 +180,7 @@
                 </div>
               </div>
               <!-- mobile padding -->
-              <div class="article-list hidden active:block px-5 py-5 md:px-0">
+              <div class="article-list hidden active:block md:block px-3 py-3 md:px-0">
                 <div
                   class="flex justify-between md:mt-10 px-3 py-3 bg-highlight"
                 >
@@ -270,34 +269,20 @@
                     <span
                       class="border-2 w-[20px] h-[20px] flex justify-center items-center text-lightGray"
                     >
-                      <svg
-                        class="block md:hidden"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="9.761"
-                        height="9.761"
-                        viewBox="0 0 9.761 9.761"
-                      >
-                        <path
-                          id="plus-solid"
-                          d="M25.761,52.88a.751.751,0,0,1-.751.751H21.631V57.01a.751.751,0,0,1-1.5,0V53.631H16.751a.751.751,0,1,1,0-1.5h3.379V48.751a.751.751,0,1,1,1.5,0V52.13H25.01A.75.75,0,0,1,25.761,52.88Z"
-                          transform="translate(-16 -48)"
-                          fill="#999"
-                        />
-                      </svg>
-                      <svg
-                        class="hidden md:block"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="9.761"
-                        height="1.506"
-                        viewBox="0 0 9.761 1.506"
-                      >
-                        <path
-                          id="plus-solid"
-                          d="M25.761,52.88a.751.751,0,0,1-.751.751c-.016.016-8.268-.029-8.259,0a.751.751,0,1,1,0-1.5c-.157.042,4.887-.006,8.259,0A.75.75,0,0,1,25.761,52.88Z"
-                          transform="translate(-16 -52.129)"
-                          fill="#999"
-                        />
-                      </svg>
+                   
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="9.761"
+                    height="9.761"
+                    viewBox="0 0 9.761 9.761"
+                  >
+                    <path
+                      id="plus-solid"
+                      d="M25.761,52.88a.751.751,0,0,1-.751.751H21.631V57.01a.751.751,0,0,1-1.5,0V53.631H16.751a.751.751,0,1,1,0-1.5h3.379V48.751a.751.751,0,1,1,1.5,0V52.13H25.01A.75.75,0,0,1,25.761,52.88Z"
+                      transform="translate(-16 -48)"
+                      fill="#999"
+                    />
+                  </svg>
                     </span>
                     <span class="pl-2 font-sans font-bold text-lightGray"
                       >美食日誌</span
@@ -307,7 +292,7 @@
                     >
                   </li>
 
-                  <ul class="hidden active:block md:block ml-11">
+                  <ul class="hidden md:block ml-11">
                     <li class="flex items-center pt-2">
                       <span class="text-lightGray font-sans">甜點</span>
                       <span class="ml-auto font-sans text-lightGray">(42)</span>
@@ -400,7 +385,7 @@
                   </button>
                 </div>
                 <div class="article-category">
-                  <ul class="new-response hidden active:block md:block pl-2 pr-5 py-8">
+                  <ul class="hidden active:block md:block pl-2 pr-5 py-8">
                     <li class="pb-2">
                       <p class="text-text font-sans">
                         The End is the Beginning :)
@@ -506,10 +491,10 @@
                       <li class="border-r border-lightGray pr-3">
                         FEB.02.2022
                       </li>
-                      <li class="md:border-r md:border-lightGray px-3">
+                      <li class="hidden md:block md:border-r md:border-lightGray px-3">
                         07:36
                       </li>
-                      <li class="hidden md:pl-3">回應(23)</li>
+                      <li class="pl-3">回應(23)</li>
                     </ul>
                     <p
                       class="ml-auto bg-highlight py-3 px-5 text-lightGray flex items-center"
@@ -602,14 +587,14 @@
                       <li class="border-r border-lightGray pr-3">
                         FEB.02.2022
                       </li>
-                      <li class="border-r border-lightGray px-3">19:36</li>
+                      <li class="hidden md:block md:border-r md:border-lightGray px-3">19:36</li>
                       <li class="pl-3">回應(13)</li>
                     </ul>
                     <p
                       class="ml-auto bg-highlight py-3 px-5 text-lightGray flex items-center"
                     >
                       繼續閱讀...
-                      <span class="pl-2">
+                      <span class="hidden md:pl-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="8"
@@ -701,14 +686,14 @@
                       <li class="border-r border-lightGray pr-3">
                         FEB.02.2022
                       </li>
-                      <li class="border-r border-lightGray px-3">19:36</li>
-                      <li class="pl-3">回應(23)</li>
+                      <li class="hidden md:block md:border-r md:border-lightGray px-3">19:36</li>
+                      <li class=" pl-3">回應(23)</li>
                     </ul>
                     <p
                       class="ml-auto bg-highlight py-3 px-5 text-lightGray flex items-center"
                     >
                       繼續閱讀...
-                      <span class="pl-2">
+                      <span class="hidden md:first-letter:pl-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="8"
@@ -793,6 +778,7 @@
       </section>
     </div>
     <!-- script -->
+    <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/all.js"></script>
   </body>
 </html>

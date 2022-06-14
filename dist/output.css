@@ -774,11 +774,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -802,6 +797,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-16 {
@@ -1013,33 +1013,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-position: center center;
 }
 
-.menu-block {
-  display: block;
+/* .menu-block {
+  @apply block;
 }
 
 .menu-close {
-  display: none;
+  @apply hidden;
 }
 
 .article-list {
-  display: none;
+  @apply hidden;
 }
 
 .article-btn {
-  display: block;
+  @apply block;
 }
 
 .article-category {
-  display: none;
+  @apply hidden;
 }
 
 .last-article {
-  display: none;
+  @apply hidden;
 }
 
 .new-response {
-  display: none;
-}
+  @apply hidden;
+} */
 
 .hover\:border-b-4:hover {
   border-bottom-width: 4px;
@@ -1224,5 +1224,3 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2.25rem;
   }
 }
-
-

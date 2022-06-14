@@ -18,14 +18,11 @@ $(document).ready(function () {
 
   //*文章列表按鈕
   $(".article-btn").click(function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     $(this).toggleClass("active");
-    $(this).parent().parent().find(".article-category > ul").slideToggle(500);
-    console.log($(this).parent().siblings());
-    $(this)
-      .parent()
-      .siblings()
-      .find(".bg-highlight")
-      .removeClass(".bg-highlight.article-category");
+    $(this).parent().parent().find(".hidden").slideToggle(500);
+    console.log($(this).parent().siblings().find(".hidden"));
+    $(this).parent().parent().siblings().find(".hidden").slideUp();
+    $(this).parent().parent().siblings().find(".article-btn").slideUp();
   });
 });
