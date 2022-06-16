@@ -20,9 +20,16 @@ $(document).ready(function () {
   $(".article-btn").click(function (e) {
     e.preventDefault();
     $(this).toggleClass("active");
-    $(this).parent().parent().find(".hidden").slideToggle(500);
-    console.log($(this).parent().siblings().find(".hidden"));
+    $(this).parent().parent().find(".article-category > ul").slideToggle(500);
     $(this).parent().parent().siblings().find(".hidden").slideUp();
-    $(this).parent().parent().siblings().find(".article-btn").slideUp();
+    $(this)
+      .parent()
+      .parent()
+      .siblings()
+      .find(".bg-highlight")
+      .removeClass("bg-highlight");
+    $(this).parent().addClass("bg-highlight");
+    $(this).parent().parent().siblings().find(".article-btn > svg").hide();
+    $(this).find("svg").show();
   });
 });
