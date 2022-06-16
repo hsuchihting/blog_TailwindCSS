@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //*先把目錄關閉 icon 與文章列表隱藏
   $(".menu-close").hide();
-
+  $("article-list .article-category > ul").show();
   //*漢堡選單點擊事件
   $(".menu-block").click(function () {
     $(".menu-close").show(); //*關閉 icon 顯示
@@ -21,7 +21,12 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).toggleClass("active");
     $(this).parent().parent().find(".article-category > ul").slideToggle(500);
-    $(this).parent().parent().siblings().find(".hidden").slideUp();
+    $(this)
+      .parent()
+      .parent()
+      .siblings()
+      .find(".article-category > ul")
+      .slideUp();
     $(this)
       .parent()
       .parent()
@@ -32,4 +37,6 @@ $(document).ready(function () {
     $(this).parent().parent().siblings().find(".article-btn > svg").hide();
     $(this).find("svg").show();
   });
+
+  $("article-list .article-category > ul").show();
 });
