@@ -6,7 +6,3 @@
   background-image: url("../assets/images/banner.png");
   background-position: center center;
 }
-
-.article-btn.active {
-  transform: rotate(180deg);
-}
