@@ -6,3 +6,10 @@
   background-image: url("../assets/images/banner.png");
   background-position: center center;
 }
+
+.mobile-header-image {
+  background-image: url("../assets/images/banner.png");
+  background-position: center center;
+  object-fit: cover;
+  background-size: cover;
+}
