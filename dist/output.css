@@ -784,6 +784,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -797,11 +802,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .py-16 {
@@ -833,16 +833,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.5rem;
 }
 
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
 .pr-5 {
   padding-right: 1.25rem;
 }
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .pb-2 {
@@ -1008,38 +1008,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
 }
 
+.duration-700 {
+  transition-duration: 700ms;
+}
+
 .header-image {
   background-image: url("../assets/images/banner.png");
   background-position: center center;
 }
 
-/* .menu-block {
-  @apply block;
+.article-btn.active {
+  transform: rotate(180deg);
 }
-
-.menu-close {
-  @apply hidden;
-}
-
-.article-list {
-  @apply hidden;
-}
-
-.article-btn {
-  @apply block;
-}
-
-.article-category {
-  @apply hidden;
-}
-
-.last-article {
-  @apply hidden;
-}
-
-.new-response {
-  @apply hidden;
-} */
 
 .hover\:border-b-4:hover {
   border-bottom-width: 4px;

@@ -19,27 +19,23 @@ $(document).ready(function () {
   //*文章列表按鈕
   $(".article-btn").click(function (e) {
     e.preventDefault();
-    $(this).toggleClass("active");
-    $(this).parent().parent().find(".article-category > ul").slideToggle(500);
-    $(this)
-      .parent()
-      .parent()
-      .siblings()
-      .find(".article-category > ul")
-      .slideUp();
-    $(this)
-      .parent()
-      .parent()
-      .siblings()
-      .find(".bg-highlight")
-      .removeClass("bg-highlight");
-    $(this).parent().addClass("bg-highlight");
-    $(this).parent().parent().siblings().find(".article-btn > svg").hide();
-    $(this).find("svg").show();
+    $(this).toggleClass('active')
+    $(".article-category > ul").slideToggle(700);
+    // $(this).parent().parent().find(".article-category > ul").slideToggle(500);
+    // $(this)
+    //   .parent()
+    //   .parent()
+    //   .siblings()
+    //   .find(".article-category > ul")
+    //   .slideUp();
+    // $(this)
+    //   .parent()
+    //   .parent()
+    //   .siblings()
+    //   .find(".bg-highlight")
+    //   .removeClass("bg-highlight");
+    // $(this).parent().addClass("bg-highlight");
+    // $(this).parent().parent().siblings().find(".article-btn > svg").hide();
+    // $(this).find("svg").show();
   });
-  if (jQuery(window).width() > 767) {
-    $(".article-category").find("ul").show();
-    console.log($(".article-category > ul"));
-    $(".article-list").find(".bg-highlight").addClass("bg-highlight");
-  }
 });
