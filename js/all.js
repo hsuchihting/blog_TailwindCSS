@@ -1,6 +1,11 @@
 $(document).ready(function () {
   //*先把目錄關閉 icon 與文章列表隱藏
   $(".menu-close").hide();
+  //* 最新文章與最新回應初始狀態
+  $(".new-article-btn").find("button > svg").hide();
+  $(".new-article-btn").removeClass("bg-highlight");
+  $(".response-btn").find("button > svg").hide();
+  $(".response-btn").removeClass("bg-highlight");
 
   //*漢堡選單點擊事件
   $(".menu-block").click(function () {
@@ -68,7 +73,7 @@ $(document).ready(function () {
     $(".article-category-btn").removeClass("bg-highlight");
   });
 
-  //* goTop
+  //* 回到頂點
   $(".go-top").click(function (e) {
     e.preventDefault();
     $("html,body").animate(
